@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  background: url('p2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+h1 {
+      font-size: 95px;
+      font-weight: bold;
+      background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7300,
+        #ffeb00,
+        #47ff00,
+        #00ffee,
+        #2b65ff,
+        #d400ff,
+        #ff0095
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      animation: rainbow 5s linear infinite;
+      text-shadow: 0 0 20px #fff, 0 0 30px #ffae00;
+      margin-top: 100px;
+    }
+
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .message {
+      font-size: 30px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-top: 20px;
+
+      background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ffa500,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0000ff,
+        #ff00ff
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 30%;
+      animation: glowText 8s linear infinite;
+    }
+
+    @keyframes glowText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+#highlight {
+  color: #00ff00;
+}
+
+footer {
+  margin-bottom: 70px;
+  font-size: 40px;
+  color: gold;
+  text-shadow: 1px 1px 5px rgb(30, 75, 240);
+}
+
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  top: -10px;
+  animation: fall linear infinite;
+  z-index: 1;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
