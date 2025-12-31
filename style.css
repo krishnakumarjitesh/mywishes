@@ -5,7 +5,8 @@
 }
 body {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: 'Poppins', sans-serif;
   color: white;
   background: url('p2.jpg') no-repeat center center fixed;
@@ -85,10 +86,11 @@ h1 {
 }
 
 footer {
-  font-size: clamp(1.2rem, 4vw, 2rem);
+   margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 22px;
   color: gold;
-  text-shadow: 1px 1px 5px rgb(6, 244, 34);
-  margin-bottom: 2vh;
+  text-shadow: 1px 1px 6px rgb(6, 244, 34);
 }
 .confetti {
   position: fixed;
