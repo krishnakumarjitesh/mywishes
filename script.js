@@ -3,13 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("fireworks");
   const ctx = canvas.getContext("2d");
 
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-
-  window.addEventListener("resize", () => {
+  function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-  });
+  }
+  resize();
+  window.addEventListener("resize", resize);
 
   let fireworks = [];
   let crackers = [];
@@ -19,11 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
       this.x = Math.random() * canvas.width;
       this.y = canvas.height;
       this.speed = Math.random() * 3 + 2;
-      this.color = `hsl(${Math.random() * 360},100%,50%)`;
+      this.color = `hsl(${Math.random()*360},100%,50%)`;
     }
-    update() {
-      this.y -= this.speed;
-    }
+    update() { this.y -= this.speed; }
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
@@ -37,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
       this.x = Math.random() * canvas.width;
       this.y = Math.random() * canvas.height / 2;
       this.particles = [];
-
       for (let i = 0; i < 30; i++) {
         this.particles.push({
           x: this.x,
@@ -48,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     }
-
     update() {
       this.particles.forEach(p => {
         p.x += Math.cos(p.angle) * p.speed;
@@ -56,19 +51,18 @@ document.addEventListener("DOMContentLoaded", () => {
         p.life--;
       });
     }
-
     draw() {
       this.particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = `hsl(${Math.random() * 360},100%,50%)`;
+        ctx.fillStyle = `hsl(${Math.random()*360},100%,50%)`;
         ctx.fill();
       });
     }
   }
 
-  setInterval(() => fireworks.push(new Firework()), 100);
-  setInterval(() => crackers.push(new Cracker()), 1200);
+  setInterval(() => fireworks.push(new Firework()), 120);
+  setInterval(() => crackers.push(new Cracker()), 1300);
 
   function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -88,11 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(animate);
   }
   animate();
+
   for (let i = 0; i < 200; i++) {
     const confetti = document.createElement("div");
     confetti.className = "confetti";
     confetti.style.left = Math.random() * window.innerWidth + "px";
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360},100%,50%)`;
+    confetti.style.backgroundColor = `hsl(${Math.random()*360},100%,50%)`;
     confetti.style.animationDuration = Math.random() * 5 + 3 + "s";
     document.body.appendChild(confetti);
   }
