@@ -32,68 +32,39 @@ canvas {
   padding: 16px;
 }
 
-/* Heading */
-h1 {
-  font-size: clamp(32px, 8vw, 80px);
-  font-weight: bold;
-  margin-top: 20px;
-
-  background: linear-gradient(
-    90deg,
-    #ff0000,#ff7300,#ffeb00,#47ff00,
-    #00ffee,#2b65ff,#d400ff,#ff0095
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 400%;
-  animation: rainbow 5s linear infinite;
-  text-shadow: 0 0 15px #fff;
-}
-
-@keyframes rainbow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Message */
-.message {
-  margin-top: 10px;
-  font-size: clamp(14px, 4.5vw, 28px);
-  font-weight: bold;
-  padding: 12px;
-  border-radius: 10px;
-
-  background: linear-gradient(
-    90deg,#ff0000,#ffa500,#ffff00,
-    #00ff00,#00ffff,#0000ff,#ff00ff
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 8s linear infinite;
-}
-
-@keyframes glowText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-#highlight {
-  color: #00ff00;
-}
-
+h1 { 
+  font-size: 50px; 
+  font-weight: bold; 
+  background: linear-gradient( 90deg, #ff0000, #ff7300, #ffeb00, #47ff00, #00ffee, #2b65ff, #d400ff, #ff0095 ); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-size: 400%; 
+  animation: rainbow 5s linear infinite; text-shadow: 0 0 20px #fff, 0 0 30px #ffae00; 
+  margin-top: 25px; } 
+  @keyframes rainbow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } } 
+  .message { 
+    font-size: 28px; 
+    font-weight: bold; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 7px; 
+    border-radius: 10px; 
+    display: inline-block; 
+    margin-top: 7px; 
+    background: linear-gradient( 90deg, #ff0000, #ffa500, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff ); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-size: 30%; animation: glowText 8s linear infinite; }
+     @keyframes glowText { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } } #highlight { color: #00ff00; }
 /* Footer */
 footer {
   position: relative;
   z-index: 3;
-  padding-bottom: 14px;
-  font-size: clamp(14px, 4vw, 24px);
+  padding-bottom: 10px;
+  font-size:27px;
   color: gold;
   text-shadow: 1px 1px 4px rgb(6, 244, 34);
 }
 
-/* Confetti */
 .confetti {
   position: fixed;
   width: 8px;
