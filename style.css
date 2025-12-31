@@ -86,11 +86,10 @@ h1 {
 }
 
 footer {
-   margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 22px;
+  font-size: clamp(1.2rem, 4vw, 2rem);
   color: gold;
-  text-shadow: 1px 1px 6px rgb(6, 244, 34);
+  text-shadow: 1px 1px 5px rgb(6, 244, 34);
+  margin-bottom: 2vh;
 }
 .confetti {
   position: fixed;
