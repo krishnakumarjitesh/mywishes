@@ -29,8 +29,7 @@ canvas {
   text-align: center;
 }
 h1 {
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-top: 12vh;
   font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: bold;
   background: linear-gradient(
@@ -58,8 +57,7 @@ h1 {
       padding: 20px;
       border-radius: 10px;
       display: inline-block;
-      margin-top: 10px;
-      padding: 12px; 
+      margin-top: 20px;
 
       background: linear-gradient(
         90deg,
@@ -88,10 +86,10 @@ h1 {
 }
 
 footer {
+  font-size: clamp(1.2rem, 4vw, 2rem);
   color: gold;
   text-shadow: 1px 1px 5px rgb(6, 244, 34);
-  margin-top: 6px;
-  font-size: 22px;
+  margin-bottom: 2vh;
 }
 .confetti {
   position: fixed;
