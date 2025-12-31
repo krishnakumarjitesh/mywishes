@@ -25,7 +25,7 @@ canvas {
 }
 
 h1 {
-      font-size: 50px;
+      font-size: 75px;
       font-weight: bold;
       background: linear-gradient(
         90deg,
@@ -43,7 +43,7 @@ h1 {
       background-size: 400%;
       animation: rainbow 5s linear infinite;
       text-shadow: 0 0 20px #fff, 0 0 30px #ffae00;
-      margin-top: 45px;
+      margin-top: 40px;
     }
 
     @keyframes rainbow {
@@ -55,10 +55,10 @@ h1 {
       font-size: 28px;
       font-weight: bold;
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
+      padding: 20px;
       border-radius: 10px;
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 40px;
 
       background: linear-gradient(
         90deg,
@@ -87,7 +87,7 @@ h1 {
 }
 
 footer {
-  margin-bottom: 25px;
+  margin-top: 50px;
   font-size: 27px;
   color: gold;
   text-shadow: 1px 1px 5px rgb(6, 244, 34);
