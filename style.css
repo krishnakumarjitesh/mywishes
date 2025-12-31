@@ -43,7 +43,7 @@ h1 {
       background-size: 400%;
       animation: rainbow 5s linear infinite;
       text-shadow: 0 0 20px #fff, 0 0 30px #ffae00;
-      margin-top: 25px;
+      margin-top: 45px;
     }
 
     @keyframes rainbow {
@@ -55,10 +55,10 @@ h1 {
       font-size: 28px;
       font-weight: bold;
       background-color: rgba(0, 0, 0, 0.6);
-      padding: 7px;
+      padding: 10px;
       border-radius: 10px;
       display: inline-block;
-      margin-top: 7px;
+      margin-top: 15px;
 
       background: linear-gradient(
         90deg,
